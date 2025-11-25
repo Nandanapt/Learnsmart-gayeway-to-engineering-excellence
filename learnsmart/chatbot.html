@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot | LearnSmart</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+    body { background: #eef2ff; }
+
+    /* Navbar */
+    nav {
+      width: 100%; background: #2b4eff; padding: 18px 60px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: fixed; top: 0; z-index: 100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    nav .logo { color: white; font-size: 26px; font-weight: 700; }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav ul li a {
+      color: white; text-decoration: none; font-size: 16px;
+      transition: 0.3s; font-weight: 500;
+    }
+    nav ul li a:hover { color: #dce4ff; }
+
+    /* Chat Section */
+    h2 { margin-top: 120px; text-align: center; color: #2b4eff; font-size: 32px; }
+
+    .chat-container {
+      width: 90%; max-width: 700px; margin: 30px auto;
+      background: white; padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    #chatbox {
+      height: 400px; overflow-y: auto;
+      border: 1px solid #d1d9ff; padding: 15px;
+      border-radius: 12px;
+      background: #f8faff;
+      margin-bottom: 15px;
+    }
+
+    .user-msg, .bot-msg {
+      padding: 10px 14px;
+      margin: 10px 0;
+      border-radius: 12px;
+      max-width: 80%;
+    }
+    .user-msg {
+      background: #2b4eff; color: white;
+      margin-left: auto;
+    }
+    .bot-msg {
+      background: #e8ecff; color: #1a2b6d;
+      margin-right: auto;
+    }
+
+    .input-area {
+      display: flex; gap: 10px;
+    }
+
+    input {
+      flex: 1; padding: 12px;
+      border: 1px solid #c7d0ff;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 20px;
+      background: #2b4eff;
+      color: white; border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #1a34b8; }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">LearnSmart</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="interview.html">Interview Prep</a></li>
+    <li><a href="internships.html">Internships</a></li>
+    <li><a href="chatbot.html">Chatbot</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<h2>Ask Your Doubts</h2>
+
+<div class="chat-container">
+  <div id="chatbox"></div>
+
+  <div class="input-area">
+    <input type="text" id="userInput" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script>
+  function sendMessage() {
+    let input = document.getElementById("userInput").value.trim();
+    if (input === "") return;
+
+    let chatbox = document.getElementById("chatbox");
+
+    let userBubble = `<div class='user-msg'>${input}</div>`;
+    chatbox.innerHTML += userBubble;
+
+    let botReply = getBotReply(input.toLowerCase());
+    setTimeout(() => {
+      chatbox.innerHTML += `<div class='bot-msg'>${botReply}</div>`;
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }, 400);
+
+    document.getElementById("userInput").value = "";
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  function getBotReply(msg) {
+    if (msg.includes("hello") || msg.includes("hi"))
+      return "Hello! I'm your LearnSmart assistant. How can I help you today?";
+
+    if (msg.includes("course"))
+      return "We offer Web Development, Python, ML, DSA, Cloud, OS, DBMS and 50+ courses! Check the Courses page.";
+
+    if (msg.includes("internship"))
+      return "You can browse internships in the Internship section. We update regularly!";
+
+    if (msg.includes("interview"))
+      return "We provide HR + Technical interview questions in the Interview Prep page.";
+
+    if (msg.includes("learnsmart"))
+      return "LearnSmart is your personal platform for learning, internships, interview prep, and chatbot assistance!";
+
+    return "I'm here to help! Check the Courses, Interview Prep, or Internships page for more details.";
+  }
+</script>
+
+</body>
+</html>

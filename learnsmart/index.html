@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LearnSmart | Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: #f4f7ff;
+    }
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      background: #2b4eff;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    nav .logo {
+      color: white;
+      font-size: 26px;
+      font-weight: 700;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #dce4ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      width: 100%;
+      height: 100vh;
+      padding: 0 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 50px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      max-width: 650px;
+      line-height: 1.5;
+    }
+    .hero button {
+      padding: 12px 25px;
+      font-size: 18px;
+      background: #2b4eff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .hero button:hover {
+      background: #1a34b8;
+    }
+
+    /* Features Section */
+    .features {
+      width: 100%;
+      padding: 60px;
+      background: white;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .feature-box {
+      background: #f7f9ff;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    .feature-box:hover {
+      transform: translateY(-8px);
+    }
+    .feature-box h3 {
+      font-size: 22px;
+      color: #2b4eff;
+      margin-bottom: 10px;
+    }
+    .feature-box p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background: #2b4eff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">LearnSmart</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="interview.html">Interview Prep</a></li>
+    <li><a href="internships.html">Internships</a></li>
+    <li><a href="chatbot.html">Chatbot</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>Welcome to LearnSmart</h1>
+  <p>Your one-stop destination for online learning, internships, projects, chatbot support and interview preparation.</p>
+  <button onclick="location.href='courses.html'">Explore Courses</button>
+</section>
+
+<section class="features">
+  <div class="feature-box">
+    <h3>📘 Courses</h3>
+    <p>Explore various technical courses with clear explanations and skill-building exercises.</p>
+  </div>
+  <div class="feature-box">
+    <h3>🎯 Interview Prep</h3>
+    <p>Get HR + Technical questions, sample answers, and interview tips.</p>
+  </div>
+  <div class="feature-box">
+    <h3>💼 Internships</h3>
+    <p>Find internship opportunities with skill-based listings and easy apply options.</p>
+  </div>
+  <div class="feature-box">
+    <h3>🤖 AI Chatbot</h3>
+    <p>Your personal assistant for instant doubts, explanations, and guidance.</p>
+  </div>
+</section>
+
+<footer>
+  © 2025 LearnSmart | Developed by Nandana P T
+</footer>
+
+</body>
+</html>

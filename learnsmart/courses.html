@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses | LearnSmart</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      background: #f4f7ff;
+    }
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      background: #2b4eff;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    nav .logo {
+      color: white;
+      font-size: 26px;
+      font-weight: 700;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #dce4ff;
+    }
+
+    /* Heading */
+    h2 {
+      margin-top: 120px;
+      text-align: center;
+      color: #2b4eff;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    /* Course Grid */
+    .course-container {
+      padding: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .course-card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    .course-card:hover {
+      transform: translateY(-8px);
+    }
+    .course-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #2b4eff;
+    }
+    .course-card p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .course-card a {
+      text-decoration: none;
+      background: #2b4eff;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .course-card a:hover {
+      background: #1b36b3;
+    }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">LearnSmart</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+    <li><a href="interview.html">Interview Prep</a></li>
+    <li><a href="internships.html">Internships</a></li>
+    <li><a href="chatbot.html">Chatbot</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<h2>Available Courses</h2>
+
+<div class="course-container">
+
+  <div class="course-card">
+    <h3>Web Development</h3>
+    <p>Learn HTML, CSS, JavaScript, React, full-stack basics.</p>
+    <a href="https://www.geeksforgeeks.org/web-development/" target="_blank">GeeksforGeeks</a>
+    <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+    <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Docs</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Python Programming</h3>
+    <p>Python basics to advanced including projects & exercises.</p>
+    <a href="https://www.geeksforgeeks.org/python-programming-language/" target="_blank">GeeksforGeeks</a>
+    <a href="https://www.w3schools.com/python/" target="_blank">W3Schools</a>
+    <a href="https://www.python.org/doc/" target="_blank">Official Docs</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Machine Learning</h3>
+    <p>ML algorithms, Supervised, Unsupervised, NLP, DL.</p>
+    <a href="https://www.geeksforgeeks.org/machine-learning/" target="_blank">GeeksforGeeks</a>
+    <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Coursera (Free Audit)</a>
+    <a href="https://scikit-learn.org/stable/" target="_blank">Scikit-Learn Docs</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Data Structures & Algorithms</h3>
+    <p>Master DSA for interviews with structured problems.</p>
+    <a href="https://www.geeksforgeeks.org/data-structures/" target="_blank">GeeksforGeeks</a>
+    <a href="https://www.youtube.com/@takeUforward" target="_blank">Take U Forward</a>
+    <a href="https://leetcode.com/" target="_blank">LeetCode</a>
+  </div>
+
+  <div class="course-card">
+    <h3>SQL & Databases</h3>
+    <p>Learn SQL queries, Joins, DBMS, MySQL, MongoDB.</p>
+    <a href="https://www.w3schools.com/sql/" target="_blank">W3Schools SQL</a>
+    <a href="https://www.geeksforgeeks.org/dbms/" target="_blank">GFG DBMS</a>
+    <a href="https://www.mysqltutorial.org/" target="_blank">MySQL Tutorial</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Cybersecurity Basics</h3>
+    <p>Learn cybersecurity fundamentals and tools.</p>
+    <a href="https://www.cybrary.it/" target="_blank">Cybrary</a>
+    <a href="https://www.geeksforgeeks.org/cyber-security/" target="_blank">GFG Cybersecurity</a>
+    <a href="https://www.edx.org/learn/cybersecurity" target="_blank">edX Free Courses</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Operating Systems</h3>
+    <p>Processes, threads, scheduling, memory mgmt.</p>
+    <a href="https://www.geeksforgeeks.org/operating-systems/" target="_blank">GFG OS</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Computer Networks</h3>
+    <p>OSI, TCP/IP, routing, switching.</p>
+    <a href="https://www.geeksforgeeks.org/computer-network-tutorials/" target="_blank">GFG CN</a>
+  </div>
+
+  <div class="course-card">
+    <h3>DBMS</h3>
+    <p>Database concepts, ER model, SQL.</p>
+    <a href="https://www.geeksforgeeks.org/dbms/" target="_blank">GFG DBMS</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Compiler Design</h3>
+    <p>Lexical, syntax analysis, parsing.</p>
+    <a href="https://www.geeksforgeeks.org/compiler-design-tutorials/" target="_blank">GFG Compiler</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Cloud Computing</h3>
+    <p>AWS, Azure, virtualization basics.</p>
+    <a href="https://www.geeksforgeeks.org/cloud-computing/" target="_blank">GFG Cloud</a>
+  </div>
+
+  <div class="course-card">
+    <h3>AI Fundamentals</h3>
+    <p>Search algorithms, planning, reasoning.</p>
+    <a href="https://www.geeksforgeeks.org/artificial-intelligence/" target="_blank">GFG AI</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Deep Learning</h3>
+    <p>Neural networks, CNN, RNN, Transformers.</p>
+    <a href="https://www.tensorflow.org/learn" target="_blank">TensorFlow</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Data Mining</h3>
+    <p>Patterns, clustering, big data basics.</p>
+    <a href="https://www.geeksforgeeks.org/data-mining/" target="_blank">GFG Data Mining</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Big Data & Hadoop</h3>
+    <p>HDFS, MapReduce, Spark basics.</p>
+    <a href="https://www.tutorialspoint.com/hadoop/index.htm" target="_blank">TutorialsPoint Hadoop</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Software Engineering</h3>
+    <p>SDLC, Agile, UML diagrams.</p>
+    <a href="https://www.geeksforgeeks.org/software-engineering/" target="_blank">GFG SE</a>
+  </div>
+
+  <div class="course-card">
+    <h3>IoT</h3>
+    <p>Sensors, microcontrollers, networks.</p>
+    <a href="https://www.geeksforgeeks.org/internet-of-things-iot/" target="_blank">GFG IoT</a>
+  </div>
+
+  <div class="course-card">
+    <h3>Cyber Forensics</h3>
+    <p>Digital investigation & analysis.</p>
+    <a href="https://www.cybrary.it/" target="_blank">Cybrary</a>
+  </div>
+
+</div>
+</html>
